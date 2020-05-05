@@ -1,0 +1,31 @@
+### Simular Requisição Rest com extension Rest Client
+
+GET http://localhost:8000/courses HTTP/1.1
+
+###
+
+GET http://localhost:8000/courses/1 HTTP/1.1
+
+###
+
+POST http://localhost:8000/courses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+
+PUT http://localhost:8000/courses/1 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+
+DELETE http://localhost:8000/courses/1 HTTP/1.1

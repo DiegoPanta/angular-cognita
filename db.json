@@ -1,0 +1,30 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Ciencia da Computacao",
+      "description": "É a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.",
+      "credit": 3305,
+      "frequency": "diario",
+      "shift": "Noite",
+      "hour": "18:40",
+      "place": "Polo Central",
+      "startDate": "2020-04-23T00:42:07.621Z",
+      "amount": 1000,
+      "advantage": 20
+    },
+    {
+      "id": 2,
+      "name": "Direito",
+      "description": "A palavra Ciências Jurídicas e Sociais possui mais de um significado correlato: É o sistema de normas de conduta e princípios criado e imposto por um conjunto de instituições para regular as relações sociais: é o que os juristas chamam de direito objetivo.",
+      "credit": 3305,
+      "frequency": "diario",
+      "shift": "Manhã",
+      "hour": "08:00",
+      "place": "Polo Central",
+      "startDate": "2020-04-23T00:42:07.621Z",
+      "amount": 1500,
+      "advantage": 10
+    }
+  ]
+}

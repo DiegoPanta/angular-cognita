@@ -1,0 +1,70 @@
+<div class="card mt-3">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>Cursos</h4>
+    </div>
+    <div class="float-right">
+      <button type="button" class="btn btn-primary" [routerLink]="['novo']">
+        Novo Curso
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Curso</th>
+          <th>Credito</th>
+          <th>Frequencia</th>
+          <th>Turno</th>
+          <th>Hora</th>
+          <th>Local</th>
+          <th>Valor</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses$ | async as courses">
+          <td>{{ course.id }}</td>
+          <td>{{ course.name }}</td>
+          <td>{{ course.credit }}</td>
+          <td>{{ course.frequency }}</td>
+          <td>{{ course.shift }}</td>
+          <td>{{ course.hour }}</td>
+          <td>{{ course.place }}</td>
+          <td>{{ course.amount }}</td>
+          <td>
+            <span class="float-right">
+              <button
+                class="btn btn-outline-warning mb-1 btn-sm"
+                (click)="onEdit(course.id)"
+              >
+                Atualizar
+              </button>
+
+              <button
+                class="btn btn-outline-danger mb-1 btn-sm"
+                (click)="onDelete(course)"
+              >
+                Remover
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Tem certeza que deseja remover esse curso?</p>
+    <button type="button" class="btn btn-default" (click)="onConfirmDelete()">
+      Sim
+    </button>
+    <button type="button" class="btn btn-primary" (click)="onDeclineDelete()">
+      Nao
+    </button>
+  </div>
+</ng-template>

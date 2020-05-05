@@ -1,0 +1,128 @@
+<form
+  class="needs-validation"
+  novalidate
+  [formGroup]="form"
+  style="padding-top: 10px;"
+>
+  <div class="form-row">
+    <div class="col-sm-6">
+      <label for="name">Nome do Curso</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Nome do Curso"
+        formControlName="name"
+        [ngClass]="{'is-invalid': submitted && hasError('name')}"
+      />
+      <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')['required']">
+          Por favor informe um nome para o curso.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('name') && hasError('name')['maxLength']">
+        Precisa ter no máximo {{ hasError('name')['maxLength'].requiredLength }} caracteres.
+      </div>
+    </div>
+    <div class="col-sm-6">
+        <label for="credit">Credito</label>
+        <input
+          type="text"
+          class="form-control"
+          id="credit"
+          placeholder="Credito"
+          formControlName="credit"
+        />
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="col-sm-6">
+      <label for="frequency">Frequencia</label>
+      <input
+        type="text"
+        class="form-control"
+        id="frequency"
+        placeholder="Frequencia"
+        formControlName="frequency"
+      />
+    </div>
+    <div class="col-sm-6">
+        <label for="shift">Turno</label>
+        <input
+          type="text"
+          class="form-control"
+          id="shift"
+          placeholder="Turno"
+          formControlName="shift"
+        />
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="col-sm-6">
+      <label for="hour">Hora</label>
+      <input
+        type="text"
+        class="form-control"
+        id="hour"
+        placeholder="Hora"
+        formControlName="hour"
+      />
+    </div>
+    <div class="col-sm-6">
+        <label for="place">Local</label>
+        <input
+          type="text"
+          class="form-control"
+          id="place"
+          placeholder="Local"
+          formControlName="place"
+        />
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="col-sm-6">
+      <label for="startDate">Data de Inicio</label>
+      <input
+        type="text"
+        class="form-control"
+        id="startDate"
+        placeholder="Data de Inicio"
+        formControlName="startDate"
+      />
+    </div>
+    <div class="col-sm-6">
+        <label for="amount">Valor</label>
+        <input
+          type="text"
+          class="form-control"
+          id="amount"
+          placeholder="Valor"
+          formControlName="amount"
+        />
+      </div>
+  </div>
+  <div class="form-row">
+    <div class="col-sm-12">
+      <label for="advantage">Desconto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="advantage"
+        placeholder="Desconto"
+        formControlName="advantage"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+      <div class="col-sm-12">
+        <label for="description">Descrição</label>
+        <textarea class="form-control" id="description" placeholder="Descrição" formControlName="description"></textarea>
+      </div>
+  </div>
+  <div style="margin-top: 10px;">
+    <button type="sumit" class="btn btn-primary" (click)="onSubmit()">
+      Salvar
+    </button>
+    <button type="button" class="btn btn-default" (click)="onCancel()">
+      Cancelar
+    </button>
+  </div>
+</form>
